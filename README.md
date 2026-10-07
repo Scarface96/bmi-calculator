@@ -6,6 +6,8 @@ A simple React app that calculates your **Body Mass Index (BMI)** from your weig
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
 
+<p align="center"><img src="docs/images/app.png" alt="BMI calculator showing a result of 30.4" width="320"></p>
+
 ## ✨ Features
 
 - Enter **weight in pounds (lbs)** and **height in inches (in)**
