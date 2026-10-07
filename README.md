@@ -51,3 +51,7 @@ Handling form input with React state, preventing default form submission, condit
 ---
 
 👤 **Tony Mulunda** — [GitHub @Scarface96](https://github.com/Scarface96)
+
+## About This Project
+
+A React application that converts user input into an immediate BMI result through a simple interactive interface. The project demonstrates component-based UI development, React state management, form handling, validation and conditional rendering.
