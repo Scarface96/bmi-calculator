@@ -6,31 +6,38 @@ A simple React app that calculates your **Body Mass Index (BMI)** from your weig
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
 
-<p align="center"><img src="docs/images/app.png" alt="BMI calculator showing a result of 30.4" width="320"></p>
+<p align="center"><img src="docs/images/app.png" alt="BMI calculator showing a reading of 17.2 on the measuring-tape scale" width="320"></p>
+
+## 🌐 Live Demo
+
+**[scarface96.github.io/bmi-calculator](https://scarface96.github.io/bmi-calculator/)** — rebuilt and redeployed automatically on every push to `main`.
 
 ## ✨ Features
 
-- Enter **weight in pounds (lbs)** and **height in inches (in)**
-- Calculates BMI using the imperial formula: `BMI = weight ÷ height² × 703`
-- Shows the result to one decimal place with a short message
-- Displays a different image depending on the BMI range
-- Validates input — alerts you if weight or height is missing
-- **Reload** button to clear the form and start again
+- **Metric or imperial** — kg/cm or lb/ft/in, and the app remembers your choice
+- **Measuring-tape scale** with the four WHO bands and a marker that slides to your reading
+- Correct **WHO adult categories**: underweight (< 18.5), healthy (18.5–24.9), overweight (25–29.9), obese (30+)
+- **Healthy weight range** for your height, plus how much to gain or lose to reach it
+- **Reading history** — your last 8 results, saved in your browser
+- Friendly **inline validation** that catches empty fields and impossible values (like 1700 cm)
+- Responsive, keyboard-accessible, and respects reduced-motion settings
 
 ## 🛠️ Built With
 
-- **React** (functional components + `useState` hook)
-- **Create React App**
-- Plain CSS
+- **React 18** (functional components, `useState`, `useEffect`, lazy state initialisers)
+- **Create React App**, plain CSS
+- **Jest** unit tests for the BMI logic (`src/bmi.test.js`)
+- **GitHub Actions** → GitHub Pages deployment (`.github/workflows/deploy.yml`)
 
 ## 📁 Project Structure
 
 ```
 src/
-├── App.js       # Form, BMI calculation and result logic
-├── index.js     # App entry point
-├── index.css    # Styles
-└── assets/      # Result illustrations
+├── App.js        # UI: unit switch, form, tape scale, results, history
+├── bmi.js        # Pure BMI logic: conversions, categories, healthy range
+├── bmi.test.js   # Unit tests for bmi.js
+├── index.js      # App entry point
+└── index.css     # Styles
 ```
 
 ## 🚀 Getting Started
@@ -38,8 +45,9 @@ src/
 ```bash
 git clone https://github.com/Scarface96/bmi-calculator.git
 cd bmi-calculator
-yarn install      # or: npm install
-yarn start        # or: npm start
+npm install
+npm start         # dev server
+npm test          # unit tests
 ```
 
 Then open [http://localhost:3000](http://localhost:3000).
